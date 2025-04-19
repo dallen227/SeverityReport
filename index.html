@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+    <title>Incident Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left panel for severity legend -->
+        <div class="legend">
+            <h2>Incident Dashboard</h2>
+            <div class="severity">
+                <div class="low">Low</div>
+                <div class="medium">Medium</div>
+                <div class="high">High</div>
+            </div>
+            <div class="structural-issues">
+                <h3>Structural Issues</h3>
+            </div>
+        </div>
+
+        <!-- Map area with storm damage points -->
+        <div class="map">
+            <div class="map-area">
+                <div class="property" style="top: 50%; left: 20%;">
+                    <div class="tooltip">
+                        <p><strong>1234 Burnham Rd</strong></p>
+                        <p>Status: Medium</p>
+                        <p>Notes: Tree on roof</p>
+                    </div>
+                </div>
+                <div class="property" style="top: 30%; left: 40%;">
+                    <div class="tooltip">
+                        <p><strong>5678 Clayion Dr</strong></p>
+                        <p>Status: High</p>
+                        <p>Notes: Roof collapse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

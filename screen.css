@@ -1,4 +1,101 @@
 /* Add screen styles below */
-a.active {
-    font-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+}
+
+.legend {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.legend h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.severity div {
+    margin-bottom: 10px;
+}
+
+.low {
+    background-color: #ffeb3b;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.medium {
+    background-color: #ff9800;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.high {
+    background-color: #f44336;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.structural-issues {
+    margin-top: 30px;
+}
+
+.map {
+    flex: 1;
+    background-image: url('https://www.openstreetmap.org/export/embed.html?bbox=-83.07210922241211%2C40.02914547702707%2C-83.06512260437012%2C40.03540203132081&layer=mapnik');
+    background-size: cover;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.property {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.property:hover .tooltip {
+    display: block;
 }
